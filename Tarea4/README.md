@@ -13,6 +13,8 @@
 
 ## 🎯 Archivos
 -Incluye un archivo TEX
+
 -carpeta de imagen de logo
+
 -Archivo en pdf
 
