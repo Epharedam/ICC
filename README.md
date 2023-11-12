@@ -1,4 +1,4 @@
-# ICC-2023
+# ICC
 # Bienvenidx a mi Repo de Tareas🚀
 
 ## Materia: Introducción a las Ciencias de la Computación
