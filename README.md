@@ -3,7 +3,7 @@
 
 ## Materia: Introducción a las Ciencias de la Computación
 
-👋 Hola, soy @Epharedam, y este es mi repositorio dedicado a ICC.
+👋 Hola, este es mi repositorio dedicado a ICC.
 
 ### Acerca de mí
 
