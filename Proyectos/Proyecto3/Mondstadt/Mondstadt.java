@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Bookstore {
+public class Mondstadt {
     public static void main(String[] args) {
         Inventory inventory = new Inventory();
         Admin admin = new Admin("admin", "admin123");
