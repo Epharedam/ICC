@@ -1,45 +1,71 @@
-interface InterfazArreglos
-{
-    int masRepetido(int[] numeros);
+public class InterfazArreglos {
 
-      //2. Matriz volteada 
-     public static void matrizEspejo(int[][] arreglo) {
-        int rows = arreglo.length - 1, cols = arreglo[0].length - 1;
+    public static int masRepetido(int[] repetido) {
+        int n = repetido.length;
+        int[] frecuencias = new int[n]; // Array
+        for (int i = 0; i < n; i++) {
+            int frecuenciaActual = 1;
+
+            for (int j = i + 1; j < n; j++) {
+                if (repetido[i] == repetido[j]) {
+                    frecuenciaActual++;
+                }
+            }
+
+            frecuencias[i] = frecuenciaActual;
+        }
+
+        int masRepetido = repetido[0];
+        int maximaFrecuencia = frecuencias[0];
+
+        for (int i = 1; i < n; i++) {
+            if (frecuencias[i] > maximaFrecuencia) {
+                maximaFrecuencia = frecuencias[i];
+                masRepetido = repetido[i];
+            }
+        }
+
+        return masRepetido;
+    }
+
+      //Matriz volteada 
+      public static void espejomatriz(int[][] matriz) {
+        int rows = matriz.length - 1, cols = matriz[0].length - 1;
         for (int i = 0; i <= rows; i++) {
             for (int j = 0; j <= cols / 2; j++) {
-                int temp = arreglo[i][j];
-                arreglo[i][j] = arreglo[i][cols - j];
-                arreglo[i][cols - j] = temp;
+                int temp = matriz[i][j];
+                matriz[i][j] = matriz[i][cols - j];
+                matriz[i][cols - j] = temp;
             }
         }
       }  
 
-      //3. matriz que hace frases 
-      public static String construyeFrase(char[][] frase) {
-        StringBuilder frase2 = new StringBuilder();
+      //matriz que hace enunciados 
+      public static String construyeFrase(char[][] enunciado) {
+        StringBuilder frase = new StringBuilder();
 
-        for (int i = 0; i < frase.length; i++) {
-            for (int j = 0; j < frase[i].length; j++) {
-                frase2.append(frase[i][j]);
+        for (int i = 0; i < enunciado.length; i++) {
+            for (int j = 0; j < enunciado[i].length; j++) {
+                frase.append(enunciado[i][j]);
             }
 
             // Agrega un espacio entre cada palabra
-            if (i < frase.length - 1) {
-                frase2.append(' ');
+            if (i < enunciado.length - 1) {
+                frase.append(' ');
             }
         }
 
-        return frase2.toString();
+        return frase.toString();
     }
     
     //4.
     //Método buscar array en otro
-    public static boolean contenido(int contenido[], int contenedor[], int m, int n) {
+    public static boolean contenido(int arreglo1[], int arreglo2[], int m, int n) {
         int i = 0;
         int j = 0;
         for (i = 0; i < n; i++) {
             for (j = 0; j < m; j++)
-                if (contenedor[i] == contenido[j])
+                if (arreglo2[i] == arreglo1[j])
                     break;
 
 

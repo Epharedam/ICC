@@ -1,38 +1,8 @@
 import java.util.Scanner;
-public class Main implements InterfazArreglos {
+public class Main {
 
     public static void main(String[] args) {
         //1. Número mas repetido, usare el ejemplo del pdf de la practica
-        
-        public int masRepetido(int[] numeros) 
-            int n = numeros.length;
-            int[] frecuencias = new int[n]; // Array
-            for (int i = 0; i < n; i++) {
-                int frecuenciaActual = 1;
-    
-                for (int j = i + 1; j < n; j++) {
-                    if (numeros[i] == numeros[j]) {
-                        frecuenciaActual++;
-                    }
-                }
-    
-                frecuencias[i] = frecuenciaActual;
-            }
-    
-            int masRepetido = numeros[0];
-            int maximaFrecuencia = frecuencias[0];
-    
-            for (int i = 1; i < n; i++) {
-                if (frecuencias[i] > maximaFrecuencia) {
-                    maximaFrecuencia = frecuencias[i];
-                    masRepetido = numeros[i];
-                }
-            }
-    
-            return masRepetido;
-        
-        //
-        
         int[] repetido = {1, 2, 3, 3, 4, 4, 5, 5, 5, 5};
 
         // imprime los numeros
@@ -51,42 +21,42 @@ public class Main implements InterfazArreglos {
         // imprime el resultado 
         System.out.println("El numero que esta mas repetido es: " + masRepetido);
         
-      
+
      // 2. Voltear Matriz
      // Con un ejemplo de los que se dio en el pdf de la practica
-        int[][] arreglo = {
+        int[][] matriz = {
             {2, 5, 0},
             {7, 3, 8},
             {3, 0, 1}
     };
     //imprimir la matriz original
     System.out.print("\nMatriz Original:\n");
-    for (int fila=0; fila<arreglo.length; fila++){
-        for (int columna=0; columna<arreglo[fila].length; columna++){
-            System.out.printf("%d ", arreglo[fila][columna]);
+    for (int fila=0; fila<matriz.length; fila++){
+        for (int columna=0; columna<matriz[fila].length; columna++){
+            System.out.printf("%d ", matriz[fila][columna]);
             }
             System.out.println();
             }
     //voltear la matriz
-         InterfazArreglos.matrizEspejo(arreglo);
+         InterfazArreglos.espejomatriz(matriz);
      System.out.println("La matriz en espejo:");
     // imprime ya volteado
-           for (int i = 0; i < arreglo.length; i++) {
-           for (int j = 0; j < arreglo[0].length; j++) {
-           System.out.print(arreglo[i][j] + " ");
+           for (int i = 0; i < matriz.length; i++) {
+           for (int j = 0; j < matriz[0].length; j++) {
+           System.out.print(matriz[i][j] + " ");
           }
           System.out.println();
         
     }
     //3. Hacer enunciados a partir de una matriz. Con ejemplo del pdf
-    char[][] frase = {
+    char[][] enunciado = {
         {'h', 'o', 'l', 'a'},
         {'q', 'u', 'e'},
         {'t', 'a', 'l'}
     };
     //imprime la matriz original
-    System.out.print("\n Enunciado en modo matriz:\n");
-    for (char[] fila : frase){
+    System.out.print("\nEnunciado en modo matriz:\n");
+    for (char[] fila : enunciado){
         for (char letra : fila) {
             System.out.printf("%c",letra);
             }
@@ -94,28 +64,28 @@ public class Main implements InterfazArreglos {
             }
     System.out.println("Enunciado normal:");        
     //imprime en texto
-     String frase2 = InterfazArreglos.construyeFrase(frase);
-     System.out.println(frase2);
+     String frase = InterfazArreglos.construyeFrase(enunciado);
+     System.out.println(frase);
     
 
     // 4. Contenido de arreglos
-    int contenido[] = {5, 4, 1};
-    int contenedor[] = {8, 4, 6, 2, 3, 0, 5, 1};
+    int arreglo1[] = {5, 4, 1};
+    int arreglo2[] = {8, 4, 6, 2, 3, 0, 5, 1};
     //impresion de los arreglos
-    int arr1 = contenido.length;
-    int arr2 = contenedor.length;
+    int arr1 = arreglo1.length;
+    int arr2 = arreglo2.length;
     
-    if (InterfazArreglos.contenido(contenido, contenedor, arr1, arr2)) {
+    if (InterfazArreglos.contenido(arreglo1, arreglo2, arr1, arr2)) {
         System.out.print("El arreglo {");
         for (int i = 0; i < arr1; i++) {
-            System.out.print(contenido[i]);
+            System.out.print(arreglo1[i]);
             if (i < arr1 - 1) {
                 System.out.print(", ");
             }
         }
         System.out.print("} esta contenido en el arreglo {");
         for (int i = 0; i < arr2; i++) {
-            System.out.print(contenedor[i]);
+            System.out.print(arreglo2[i]);
             if (i < arr2 - 1) {
                 System.out.print(", ");
             }
@@ -124,14 +94,14 @@ public class Main implements InterfazArreglos {
     } else {
         System.out.print("El arreglo {");
         for (int i = 0; i < arr1; i++) {
-            System.out.print(contenido[i]);
+            System.out.print(arreglo1[i]);
             if (i < arr1 - 1) {
                 System.out.print(", ");
             }
         }
         System.out.print("} no esta contenido en el arreglo {");
         for (int i = 0; i < arr2; i++) {
-            System.out.print(contenedor[i]);
+            System.out.print(arreglo2[i]);
             if (i < arr2 - 1) {
                 System.out.print(", ");
             }
