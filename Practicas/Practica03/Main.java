@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        // Convertidor de temperatura
+        // Conversor de temperatura
         double celsius = 20;
         double fahrenheit = fahrenheitcambio(celsius);
         System.out.println(" "+ fahrenheit);

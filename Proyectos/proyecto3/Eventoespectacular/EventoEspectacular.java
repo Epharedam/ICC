@@ -1,9 +1,4 @@
-import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.List;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
-import java.util.Random;
-
-public class Mondstadt {
+public class EventoEspectacular {
     public static void main(String[] args) {
         Inventory inventory = new Inventory();
         Admin admin = new Admin("admin", "admin123");
