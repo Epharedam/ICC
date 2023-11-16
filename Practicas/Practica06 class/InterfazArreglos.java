@@ -40,7 +40,7 @@ public class InterfazArreglos {
         }
       }  
 
-      //matriz que hace enunciados 
+      //3. matriz que hace enunciados 
       public static String construyeFrase(char[][] enunciado) {
         StringBuilder frase = new StringBuilder();
 
@@ -58,8 +58,7 @@ public class InterfazArreglos {
         return frase.toString();
     }
     
-    //4.
-    //Método buscar array en otro
+    //4. Método buscar array en otro
     public static boolean contenido(int arreglo1[], int arreglo2[], int m, int n) {
         int i = 0;
         int j = 0;
