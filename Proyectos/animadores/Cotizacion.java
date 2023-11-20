@@ -54,7 +54,7 @@ public class Cotizacion {
         final int MAX_PRODUCTS = 10; // Set the maximum number of products
 
         System.out.println("\t\t\t\t--------------------Factura-----------------");
-        System.out.println("\t\t\t\t\t " + "  " + "Metro Mart Grocery Shop");
+        System.out.println("\t\t\t\t\t " + "  " + "Evento Espectacular");
         System.out.println("\t\t\t\t\t3/98 Mecrobertganj New Mumbai");
         System.out.println("\t\t\t\t\t" + "    " + "Opposite Metro Walk");
         System.out.println("Gracias por usar nuestros servicios" + "\t\t\t\t\t\t\t");
