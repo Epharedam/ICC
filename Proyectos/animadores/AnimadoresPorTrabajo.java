@@ -72,11 +72,11 @@ public class AnimadoresPorTrabajo {
                     }
                     break;
 
-                case 2:
+                    case 2:
                     // Agregar animadores a un trabajo existente
                     System.out.print("Ingrese el nombre del trabajo al que desea agregar animadores: ");
                     String trabajoExistente = scanner.nextLine();
-
+                
                     // Buscar el índice del trabajo
                     int indiceTrabajo = -1;
                     for (int i = 0; i < contadorAnimadores; i++) {
@@ -85,7 +85,7 @@ public class AnimadoresPorTrabajo {
                             break;
                         }
                     }
-
+                
                     if (indiceTrabajo != -1) {
                         // Agregar animadores y salarios al trabajo existente
                         if (contadorAnimadoresPorTrabajo[indiceTrabajo] < animadoresPorTrabajo[indiceTrabajo].length) {
@@ -93,12 +93,17 @@ public class AnimadoresPorTrabajo {
                             String nuevoAnimador = scanner.nextLine();
                             System.out.print("Ingrese el salario para " + nuevoAnimador + ": ");
                             double nuevoSalario = scanner.nextDouble();
-
+                
+                            // Update the animadores and salarios arrays
+                            animadores[contadorAnimadores] = nuevoAnimador;
+                            salarios[contadorAnimadores] = nuevoSalario;
+                
                             animadoresPorTrabajo[indiceTrabajo][contadorAnimadoresPorTrabajo[indiceTrabajo]] = nuevoAnimador;
                             salariosPorTrabajo[indiceTrabajo][contadorAnimadoresPorTrabajo[indiceTrabajo]] = nuevoSalario;
-
+                
+                            contadorAnimadores++;
                             contadorAnimadoresPorTrabajo[indiceTrabajo]++;
-
+                
                             System.out.println("Animador agregado al trabajo " + trabajoExistente);
                         } else {
                             System.out.println("Lista de animadores llena para este trabajo. No se pueden agregar más animadores.");
@@ -107,6 +112,7 @@ public class AnimadoresPorTrabajo {
                         System.out.println("No se encontró el trabajo. Por favor, verifique el nombre del trabajo.");
                     }
                     break;
+                
 
                 case 3:
                     // Consultar animadores y salarios
